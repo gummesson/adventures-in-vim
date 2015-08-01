@@ -1,0 +1,18 @@
+/**
+ * Defaults
+ */
+
+:root {
+  --baseSize: 1.5rem;
+  --baseWidth: 48rem;
+  --fontSize: 1rem;
+  --colorPrimary: #111;
+  --colorSecondary: #888;
+  --colorTertiary: #fff;
+}
+
+@custom-media --mediaXs (max-width: 30em);
+@custom-media --mediaSm (min-width: 48em);
+@custom-media --mediaMd (min-width: 64em);
+@custom-media --mediaLg (min-width: 80em);
+@custom-media --mediaXl (min-width: 96em);

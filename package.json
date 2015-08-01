@@ -1,0 +1,43 @@
+{
+  "name": "adventures-in-vim",
+  "version": "0.0.0",
+  "private": "true",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gummesson/adventures-in-vim.git"
+  },
+  "author": "Ellen Gummesson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gummesson/adventures-in-vim/issues"
+  },
+  "homepage": "https://github.com/gummesson/adventures-in-vim",
+  "dependencies": {
+    "normalize.css": "^3.0.3"
+  },
+  "devDependencies": {
+    "cssnext": "^1.8.2",
+    "http-server": "^0.8.0",
+    "metalsmith": "^2.0.1",
+    "metalsmith-build-date": "^0.1.0",
+    "metalsmith-collections": "^0.7.0",
+    "metalsmith-feed": "0.0.6",
+    "metalsmith-html-minifier": "^1.1.0",
+    "metalsmith-ignore": "^0.1.2",
+    "metalsmith-markdown": "^0.2.1",
+    "metalsmith-permalinks": "^0.4.0",
+    "metalsmith-templates": "^0.7.0",
+    "surge": "^0.14.3",
+    "swig": "^1.4.2"
+  },
+  "scripts": {
+    "start": "npm run build && npm run serve",
+    "bundle": "npm run build",
+    "build": "npm run build:css && npm run build:html",
+    "build:css": "cssnext -C cssnext.json -c css/index.css > src/index.css",
+    "build:html": "metalsmith",
+    "serve": "http-server -p 8000 -c-1 www",
+    "deploy": "npm run build && npm run deploy:surge",
+    "deploy:surge": "surge -p www"
+  }
+}

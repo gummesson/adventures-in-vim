@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="{{ site.author }}">
+  <title>{{ site.title }}{% if title %} &bull; {{ title }}{% endif %}</title>
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//themes.googleusercontent.com">
+  <link rel="stylesheet" href="/index.css">
+  <link rel="alternate" href="/feed.xml" type="application/rss+xml">
+  <link rel="canonical" href="{{ site.url }}">
+</head>
+<body>
+  <header class="head" role="banner">
+    <div class="wrap">
+      <div class="box">
+        <h1 class="head__title">
+          <a class="shh" href="/">{{ site.title }}</a>
+        </h1><!-- /.head__title -->
+      </div><!-- /.box -->
+    </div><!-- /.wrap -->
+  </header><!-- /.head -->
+  <main class="main" role="main">
+    <div class="wrap">
+      <div class="box">
+      {% block content -%}{%- endblock %}
+      </div><!-- /.box -->
+    </div><!-- /.wrap -->
+  </main><!-- /.main -->
+  {% if date %}
+  <footer class="foot" role="contentinfo">
+    <div class="wrap">
+      <div class="box">
+        <p class="foot__date">
+          {{ date | date('Y-m-d') }}
+        </p><!-- /.foot__date -->
+      </div><!-- /.box -->
+    </div><!-- /.wrap -->
+  </footer><!-- /.foot -->
+  {% endif %}
+</body>
+</html>

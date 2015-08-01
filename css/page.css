@@ -1,0 +1,16 @@
+/**
+ * Page
+ */
+
+.page {}
+.page__head {}
+
+.page__title {
+  margin-top: 0;
+}
+
+.page__body {}
+
+.page__body *:last-child {
+  margin-bottom: 0;
+}

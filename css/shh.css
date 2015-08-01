@@ -1,0 +1,9 @@
+/**
+ * Shh
+ */
+
+.shh,
+.shh:visited {
+  color: inherit;
+  text-decoration: none;
+}

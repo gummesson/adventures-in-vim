@@ -1,0 +1,45 @@
+{
+  "source": "src",
+  "destination": "www",
+  "metadata": {
+    "site": {
+      "title": "Adventures in Vim",
+      "author": "Ellen Gummesson",
+      "url": "http://vim.surge.sh"
+    }
+  },
+  "plugins": {
+    "metalsmith-ignore": [
+      "drafts/*"
+    ],
+    "metalsmith-collections": {
+      "posts": {
+        "sortBy": "date",
+        "reverse": "true",
+        "refer": "false"
+      },
+      "pages": {
+        "refer": "false"
+      }
+    },
+    "metalsmith-markdown": {
+      "gfm": "true",
+      "tables": "true",
+      "smartypants": "true"
+    },
+    "metalsmith-permalinks": {
+      "pattern": ":title",
+      "relative": "false"
+    },
+    "metalsmith-build-date": {},
+    "metalsmith-feed": {
+      "collection": "posts",
+      "destination": "feed.xml"
+    },
+    "metalsmith-templates": {
+      "engine": "swig",
+      "directory": "html"
+    },
+    "metalsmith-html-minifier": {}
+  }
+}

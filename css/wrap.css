@@ -1,0 +1,7 @@
+/**
+ * Wrap
+ */
+
+.wrap {
+  max-width: var(--baseWidth);
+}

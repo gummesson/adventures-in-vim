@@ -1,0 +1,13 @@
+{% extends "default.html" -%}
+{% block content -%}
+<article class="page">
+  <header class="page__head">
+    <h1 class="page__title">
+      {{ title }}
+    </h1><!-- /.page__title -->
+  </header><!-- /.page__head -->
+  <section class="page__body">
+    {{ contents | safe }}
+  </section><!-- /.page__body -->
+</article><!-- /.page -->
+{%- endblock %}

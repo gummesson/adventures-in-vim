@@ -1,0 +1,22 @@
+/**
+ * Base
+ */
+
+html {
+  font: 400 1em/1.5 "Fira Mono", monospace;
+}
+@media (--mediaXs) {
+  html {
+    font-size: 0.875em;
+  }
+}
+
+body {
+  background-color: var(--colorTertiary);
+  color: var(--colorPrimary);
+}
+
+::selection {
+  background-color: var(--colorPrimary);
+  color: var(--colorTertiary);
+}

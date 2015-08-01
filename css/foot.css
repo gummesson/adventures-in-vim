@@ -1,0 +1,11 @@
+/**
+ * Foot
+ */
+
+.foot {}
+
+.foot__date {
+  margin-bottom: 0;
+  margin-left: 0;
+  font-weight: 700;
+}

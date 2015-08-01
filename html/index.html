@@ -1,0 +1,19 @@
+{% extends "default.html" -%}
+{% block content -%}
+<article class="page">
+  <header class="page__head">
+    <h1 class="page__title">
+      Contents
+    </h1><!-- /.page__date -->
+  </header><!-- /.page__head -->
+  <section class="page__body">
+    <ol reversed>
+    {% for post in collections.posts -%}
+      <li>
+        <a href="/{{ post.path }}/">{{ post.title }}</a>
+      </li>
+    {%- endfor %}
+    </ul><!-- /.stack -->
+  </section><!-- /.page__body -->
+</article><!-- /.page -->
+{%- endblock %}
