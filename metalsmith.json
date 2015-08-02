@@ -40,6 +40,9 @@
       "engine": "swig",
       "directory": "html"
     },
+    "metalsmith-sitemap": {
+      "hostname": "http://vim.surge.sh"
+    },
     "metalsmith-html-minifier": {}
   }
 }
